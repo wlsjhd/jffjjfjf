@@ -7,9 +7,6 @@ server = 114.114.114.114
 server = 119.29.29.29
 server = 8.8.8.8
 [policy]
-static=TelegramUS, direct, proxy, reject
-static=TelegramSG, direct, proxy, reject
-static=TelegramNL, direct, proxy, reject
 static = 全球加速, proxy, direct,香港节点,日本节点, 狮城节点
 url-latency-benchmark = 香港节点, server-tag-regex=香港|港|HK|(?i)Hong Kong, check-interval=1800, tolerance=50, alive-checking=false
 url-latency-benchmark=日本节点, server-tag-regex=日本|日|JP|(?i)Japan, check-interval=600, tolerance=0, alive-checking=false
