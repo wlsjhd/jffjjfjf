@@ -26,9 +26,6 @@ circumvent-ipv6-answer = ::
 static=全球加速, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 特殊节点, proxy, direct, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
 static=苹果服务, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 特殊节点, proxy, direct, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png
 static=港台番剧, 香港节点, 台湾节点, direct, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/StreamingSE.png
-static=国际媒体, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 特殊节点, proxy, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Streaming.png
-static=电报代理, 狮城节点, proxy, direct, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png
-static=黑白名单, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 特殊节点, proxy, direct, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png
 static=特殊节点, server-tag-regex=^(?!.*(港|台|日|韩|坡|美|HK|US|TW|JP|KR|SG|Hong|Tai|Japan|Korea|Singapore|States)), img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Static.png
 url-latency-benchmark=香港节点, server-tag-regex=(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|美)).)*$, check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
 url-latency-benchmark=台湾节点, server-tag-regex=(?=.*(台|TW|(?i)Taiwan))^((?!(港|日|韩|新|美)).)*$, check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
@@ -38,6 +35,7 @@ url-latency-benchmark=狮城节点, server-tag-regex=(?=.*(新|狮|獅|SG|(?i)Si
 url-latency-benchmark=美国节点, server-tag-regex=(?=.*(美|US|(?i)States|American))^((?!(港|台|日|韩|新)).)*$, check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
 
 [server_remote]
+http://api.aca.best/api/v1/client/subscribe?token=2d43b91fba5c7c9c23346a4a339b2945, tag=ACA, update-interval=172800, opt-parser=false, enabled=true
 
 [filter_remote]
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Direct+.list, tag=直连修正, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
@@ -45,15 +43,15 @@ https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/R
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Reject/Hijacking.list, tag=运营劫持, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Reject/Tracking.list, tag=隐私保护, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Streaming/Video/TikTok.list, tag=海外抖音, force-policy=全球加速, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Google/GoogleVoice.list, tag=谷歌语音, force-policy=美国节点, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Telegram.list, tag=电报代理, force-policy=电报代理, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Streaming/!CN.list, tag=国际媒体, force-policy=国际媒体, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Streaming/CN.list, tag=港台番剧, force-policy=港台番剧, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Google/GoogleVoice.list, tag=谷歌语音, force-policy=全球加速, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Telegram.list, tag=电报代理, force-policy=全球加速, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Streaming/!CN.list, tag=国际媒体, force-policy=全球加速, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Streaming/CN.list, tag=港台番剧, force-policy=全球加速, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Proxy.list, tag=全球加速, force-policy=全球加速, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Apple/Apple.list, tag=苹果服务, force-policy=苹果服务, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Direct.list, tag=国内网站, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/WeChat.list, tag=微信直连, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Proxy+.list, tag=代理修正, force-policy=proxy, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Proxy+.list, tag=代理修正, force-policy=全球加速, update-interval=172800, opt-parser=true, enabled=true
 
 [rewrite_remote]
 https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/config/QX.snippet, tag=Sub Store, update-interval=172800, opt-parser=true, enabled=true
@@ -77,7 +75,7 @@ ip-cidr, 100.64.0.0/10, direct
 ip-cidr, 224.0.0.0/4, direct
 ip6-cidr, fe80::/10, direct
 geoip, cn, direct
-final, 黑白名单
+final, 全球加速
 
 [rewrite_local]
 ^https?:\/\/(www.)?(g|google)\.cn url 302 https://www.google.com
@@ -88,5 +86,7 @@ event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/
 [http_backend]
 
 [mitm]
+passphrase = E87C3935
+p12 = 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
 skip_validating_cert = true
 hostname = www.google.cn
