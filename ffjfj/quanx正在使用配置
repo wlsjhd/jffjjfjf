@@ -6,7 +6,7 @@ server = 114.114.114.114
 server = 119.29.29.29
 server = 8.8.8.8
 [policy]
-url-latency-benchmark = 香港节点, server-tag-regex=香港|港|HK|(?i)HongKong, check-interval=1800, tolerance=50, alive-checking=false
+url-latency-benchmark = 香港节点, server-tag-regex=香港|港|HK|(?i)Hong Kong, check-interval=1800, tolerance=50, alive-checking=false
 [server_remote]
 http://api.aca.best/api/v1/client/subscribe?token=2d43b91fba5c7c9c23346a4a339b2945, tag=aca, update-interval=172800, opt-parser=false, enabled=true
 [filter_remote]
